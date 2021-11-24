@@ -14,6 +14,11 @@ public class OrderPizza extends TestBase {
 		Select pizzaList = new Select(driver.findElement(By.id("pizza1Pizza")));
 		pizzaList.selectByVisibleText(pizzatype);
 	}
+	
+	public void selectPizzatopping(String pizzatopping) {
+		Select toppingList = new Select(driver.findElement(By.xpath("//div[@id='pizza1']//select[@class='toppings1']")));
+		toppingList.selectByVisibleText(pizzatopping);
+	}
 
 	public void enterQuantity(String quantity) {
 		driver.findElement(By.id("pizza1Qty")).sendKeys(quantity);
